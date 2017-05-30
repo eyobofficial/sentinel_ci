@@ -10,11 +10,17 @@
 		</a>
 		<div id="main-nav-collapse" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav main-navbar-nav">
-				<li class="active">
+				<li <?php if($page_title === 'home'): ?> class="active" <?php endif; ?>>
 					<a href="<?php echo site_url(); ?>">HOME</a>
 				</li>
-				<li><a href="<?php echo site_url('pages/products'); ?>">PRODUCTS</a></li>
-				<li><a href="<?php echo site_url('pages/services'); ?>">SERVICES</a></li>
+
+				<li <?php if($page_title === 'products'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/products'); ?>">PRODUCTS</a>
+				</li>
+
+				<li <?php if($page_title === 'services'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/services'); ?>">SERVICES</a>
+				</li>
 
 				<!-- <li class="dropdown ">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCTS <i class="fa fa-angle-down"></i></a>
@@ -31,10 +37,21 @@
 						<li><a href="page-contact.html">Contact</a></li>
 					</ul>
 				</li> -->
-				<li><a href="<?php echo site_url('pages/about'); ?>">ABOUT</a></li>
-				<li><a href="<?php echo site_url('pages/blogs'); ?>">BLOGS</a></li>
-				<li><a href="<?php echo site_url('pages/contact'); ?>">CONTACTS</a></li>
-				<li><a href="<?php echo site_url('pages/faq'); ?>">FAQ</a></li>
+				<li <?php if($page_title === 'about'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/about'); ?>">ABOUT</a>
+				</li>
+
+				<li <?php if($page_title === 'blogs'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/blogs'); ?>">BLOGS</a>
+				</li>
+
+				<li <?php if($page_title === 'contact'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/contact'); ?>">CONTACTS</a>
+				</li>
+
+				<li <?php if($page_title === 'faq'): ?> class="active" <?php endif; ?>>
+					<a href="<?php echo site_url('pages/faq'); ?>">FAQ</a>
+				</li>
 			</ul>
 		</div>
 		<!-- END MAIN NAVIGATION -->

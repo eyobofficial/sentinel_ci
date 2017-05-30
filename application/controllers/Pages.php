@@ -11,28 +11,32 @@ class Pages extends MY_Controller {
 
 	public function index()
 	{
-		$this->data['main_view'] .= 'index_view';
+		$this->data['page_title'] = 'home';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
 
 	public function about()
 	{
-		$this->data['main_view'] .= 'about_view';
+		$this->data['page_title'] = 'about';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
 
 	public function products()
 	{
-		$this->data['main_view'] .= 'products_view';
+		$this->data['page_title'] = 'products';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
 
 	public function services()
 	{
-		$this->data['main_view'] .= 'services_view';
+		$this->data['page_title'] = 'services';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
@@ -40,7 +44,8 @@ class Pages extends MY_Controller {
 
 	public function blogs()
 	{
-		$this->data['main_view'] .= 'blogs_view';
+		$this->data['page_title'] = 'blogs';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
@@ -48,7 +53,17 @@ class Pages extends MY_Controller {
 
 	public function contact()
 	{
-		$this->data['main_view'] .= 'contact_view';
+		$this->data['page_title'] = 'contact';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
+		$this->render();
+	}
+
+
+
+	public function faq()
+	{
+		$this->data['page_title'] = 'faq';
+		$this->data['main_view'] .= $this->data['page_title'] . '_view';
 		$this->render();
 	}
 
